@@ -8,13 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom CSS -->
-    <!-- Extra small devices (portrait phones, less than 768px) -->
+    <!-- Extra small devices (portrait phones, less than 500px) -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Extra small devices (portrait phones, less than 768px) -->
+    <link rel="stylesheet" media="(min-width: 500px) and (max-width: 767px)" href="css/mediaQ500-768.css"/>
     <!-- Small devices (tablets, 768px and up) -->
-    <link rel="stylesheet" media="(min-width: 768px) and (max-width: 992px)" href="css/mediaQ768-992.css"/>
+    <link rel="stylesheet" media="(min-width: 768px) and (max-width: 991px)" href="css/mediaQ768-992.css"/>
     <!-- (desktops, 992 and up) -->
-    <link rel="stylesheet" media="(min-width: 992px) and (max-width: 2000px)" href="css/mediaQ992-2000.css"/>
-    <!-- Large devices (large desktops, 1200px and up) -->
+    <link rel="stylesheet" media="(min-width: 992px) and (max-width: 1280px)" href="css/mediaQ992-1280.css"/>
+    <!-- Large devices (large desktops, 1280px and up) -->
+    <link rel="stylesheet" media="(min-width: 1281px) and (max-width: 2000px)" href="css/mediaQ1280-2000.css"/>
+    <!-- Large devices (large desktops, 1920px and up) -->
     <link rel="stylesheet" media="(min-width: 2000px)" href="css/mediaQMin2000.css"/>
     <title>Cervejaria</title>
   </head>
@@ -27,14 +31,15 @@
         <div id="logo">
           <img src="img/Logo.png">
         </div>
-        <nav class="navbar navbar-dark  navbar-expand-md justify-content-center">
+        <!-- Navbar for smaller then 992 -->
+        <nav id="navmenuS" class="navbar navbar-dark  navbar-expand-md justify-content-center navbar768">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="navbar-collapse collapse justify-content-between w-100" id="mainNav">
             <ul class="navbar-nav mx-auto text-center">
               <li class="nav-item active">
-                <a class="nav-link js-scroll-trigger" href="#menu">Home<span class="sr-only">Home</span></a>
+                <a class="primeiro nav-link js-scroll-trigger" href="#home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#cervejas">Cervejas</a>
@@ -48,23 +53,47 @@
             </ul>
           </div>
         </nav>
+        <!-- End Navbar for smaller then 992 -->
+        <!-- Navbar for bigger then 992 -->
+        <nav id="navmenuB" class="navbar navbar-dark  navbar-expand-md justify-content-center navbar992">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse justify-content-between w-100" id="mainNav">
+            <ul class="navbar-nav mx-auto text-center">
+              <li class="nav-item active">
+                <a class="primeiro nav-link js-scroll-trigger navspacer" href="#menu">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger navspacer" href="#cervejas">Cervejas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger navspacer" href="#eventos">Eventos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contato">Contatos</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Navbar for bigger then 992 -->
       </section>
       <!--End Of Section Menu -->
       <!--Start of Section Cervejas -->
       <section id="cervejas">
-        <div class="bannerCervejaSobreEvento">
+        <div class="bannerCervejaSobreEvento cervejaBanner">
           <div id="imgBackgroundTituloSobre" class="backgroundTitulo">
             <div class="tituloCerveja">
               <h1>Cervejas</h1>
             </div>
           </div>
         </div>
-        <div class="container">
+        <div class="container-cerveja">
           <div class="foto 992">
             <img src="img/Cerveja1.png">
           </div>
           <div class="768 CervejaRotulo">
-            <img class"img-fluid"="class" img-fluid""="img-fluid""" src="img/Mobile_Pag2_img1.png">
+            <img src="img/mobile_pag2_img1.png">
           </div>
           <div class="descricao">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum tristique nisl eu 24pt quam bibendum tincidunt. Morbi ultricies ante in velit sollicitudin iaculis. Vivamus consectetur eu nisl vel pre-tium. Maecenas molestie neque tortor, sed
@@ -74,22 +103,7 @@
             <img src="img/rotulo1.png">
           </div>
         </div>
-        <div class="container spacer">
-          <div class="foto 992">
-            <img src="img/Cerveja1.png">
-          </div>
-          <div class="768 CervejaRotulo">
-            <img src="img/Mobile_Pag2_img1.png">
-          </div>
-          <div class="descricao">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum tristique nisl eu 24pt quam bibendum tincidunt. Morbi ultricies ante in velit sollicitudin iaculis. Vivamus consectetur eu nisl vel pre-tium. Maecenas molestie neque tortor, sed
-              semper tortor posuere at. Duis porta ac enim at blandit. Quisque ac nulla urna. Vivamus haretra dolor nibh, in ali-quet eros sagittis vel.</p>
-          </div>
-          <div class="estilo 992">
-            <img src="img/rotulo1.png">
-          </div>
-        </div>
-        <div class="container spacer">
+        <div class="container-cerveja spacer">
           <div class="foto 992">
             <img src="img/Cerveja1.png">
           </div>
@@ -104,7 +118,22 @@
             <img src="img/rotulo1.png">
           </div>
         </div>
-        <div class="container spacer">
+        <div class="container-cerveja spacer">
+          <div class="foto 992">
+            <img src="img/Cerveja1.png">
+          </div>
+          <div class="768 CervejaRotulo">
+            <img src="img/Mobile_Pag2_img1.png">
+          </div>
+          <div class="descricao">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum tristique nisl eu 24pt quam bibendum tincidunt. Morbi ultricies ante in velit sollicitudin iaculis. Vivamus consectetur eu nisl vel pre-tium. Maecenas molestie neque tortor, sed
+              semper tortor posuere at. Duis porta ac enim at blandit. Quisque ac nulla urna. Vivamus haretra dolor nibh, in ali-quet eros sagittis vel.</p>
+          </div>
+          <div class="estilo 992">
+            <img src="img/rotulo1.png">
+          </div>
+        </div>
+        <div class="container-cerveja spacer">
           <div class="foto 992">
             <img src="img/Cerveja1.png">
           </div>
@@ -120,7 +149,7 @@
           </div>
         </div>
       </section>
-      <section id="eventos">
+      <section id="contato">
         <div class="bannerCervejaSobreEvento">
           <div id="imgBackgroundTituloEvento" class="backgroundTitulo">
             <div class="tituloSobreEventosContato">
@@ -129,36 +158,37 @@
           </div>
         </section>
         <!--End of Section Cervejas -->
-        <!--Start of Section Formulario -->
-        <section id="formSection">
-          <!--- Formulário ------>
-          <div id="formSpacer"></div>
-          <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form">
-            <!-- Hiden Imput -->
-            <input type="hidden" name="recipient" value="comercial@noisehbom.com.br">
-            <input type="hidden" name="subject" value="E-Mail Nois eh Bom">
-            <!-- End of Hiden Imput -->
-            <div class="form-group form-text">
-              <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
-            </div>
-            <div class="form-group form-text">
-              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail" required="required">
-            </div>
-            <div class="form-group form-text">
-              <input id="phone" class="form-control cel-sp-mask" type="Telefone" name="phone" placeholder="Telefone" required="required">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" id="exampleFormControlTextarea1" name="conteudo" rows="6" placeholder="Deixe sua mensagem" required="required"></textarea>
-            </div>
-            <div id="buttonBox">
+        <section id="form">
+          <div id="formSection">
+            <!--- Formulário ------>
+            <div id="formSpacer"></div>
+            <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form">
+              <!-- Hiden Input -->
+              <input type="hidden" name="recipient" value="comercial@noisehbom.com.br">
+              <input type="hidden" name="subject" value="E-Mail Nois eh Bom">
+              <!-- End of Hiden Input -->
               <div>
-                <div id="check"></div>
-                <div id="loadIcon"></div>
+                <div class="form-group form-text">
+                  <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
+                </div>
+                <div class="form-group form-text">
+                  <input type="email" class="form-control" name="email" placeholder="e-mail" required="required">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="conteudo" rows="8" placeholder="Mensagem..." required="required"></textarea>
+                </div>
               </div>
-              <button type="submit" class="btn btn-primary" id="button">enviar</button>
-            </div>
-            <input type="hidden" name="redirect" value="http://www.noisehbom.com.br/thankspage.html">
-          </form>
+              <div id="buttonBox">
+                <div>
+                  <div id="check"></div>
+                  <div id="loadIcon"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  <span>enviar</span>
+                </button>
+              </div>
+            </form>
+          </div>
         </section>
         <!--- End of Formulário ------>
         <section id="redesSociais">
@@ -175,16 +205,17 @@
         </footer>
       </section>
 
-      <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      <!-- Customaize Java Script -->
-      <script src="js/menu-resize.js"></script>
+
+      <script src="js/menu-Resize.js"></script>
+      <!--Custom Java for Variabel Menu Size -->
+      <script src="js/planos-carousel.js"></script>
+      <!--Custom Java for Scrolling -->
+      <script src="js/scrolling-nav.js"></script>
+      <!--Custom Java for Scrolling -->
+      <script src="js/stick-navBar.js"></script>
     </body>
   </html>
-  maxcdn.bootstrapcdn.com
-/*! * Bootstrap v4.0.0 (https://getbootstrap.com) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-2018 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orang...
-maxcdn.bootstrapcdn.com
-Guilherme Carvalho

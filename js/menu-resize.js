@@ -1,9 +1,11 @@
 function screenChange(screenWidth) {
   if (screenWidth < 768) {
-    $("#carouselExampleControls").removeClass("display");
+    $(".slider-wrap").removeClass("display");
     $("#noCarousel").addClass("display");
     $(".992").addClass("display");
     $(".768").removeClass("display");
+    $(".navbar768").removeClass("display");
+    $(".navbar992").addClass("display");
     $(window).scroll(function() {
       var scrolledY = $(window).scrollTop();
 
@@ -20,11 +22,12 @@ function screenChange(screenWidth) {
     });
 
   } else if (screenWidth >= 768 && screenWidth < 992) {
-
-    $("#carouselExampleControls").addClass("display");
-    $("#noCarousel").removeClass("display");
-    $(".992").removeClass("display");
-    $(".768").addClass("display");
+    $(".slider-wrap").removeClass("display");
+    $("#noCarousel").addClass("display");
+    $(".992").addClass("display");
+    $(".768").removeClass("display");
+    $(".navbar768").addClass("display");
+    $(".navbar992").removeClass("display");
 
 
 
@@ -39,10 +42,12 @@ function screenChange(screenWidth) {
     });
   } else if (screenWidth >= 992) {
 
-    $("#carouselExampleControls").addClass("display");
+    $(".slider-wrap").addClass("display");
     $("#noCarousel").removeClass("display");
     $(".992").removeClass("display");
     $(".768").addClass("display");
+    $(".navbar768").addClass("display");
+    $(".navbar992").removeClass("display");
 
     if (screenWidth > 2000) {
       var borda = (screenWidth / 100);

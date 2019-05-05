@@ -1,0 +1,47 @@
+/* Main CSS Desenvolvido para Mobile */
+/*--------------------------------------------------------------------------------------
+Salão Cabalereiro - Template
+0. GLOBAL
+1. NAVBAR / LOGO
+2. BANNER
+3. CERVEJAS
+4. SOBRE
+5. EVENTOS
+6. CONTATO
+7. MAPA
+8. FORMULARIO
+ ----------------------------------------------------------------------------------------*/
+#mainBackground {
+  margin: 60px 0;
+}
+
+.bannerCerveja {
+  background-image   : url("../img/BannerCerveja_mobile.jpg");
+  background-position: center;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+  height             : 80vh;
+}
+/*--------------------
+     5. EVENTOS
+  ----------------------*/
+#setaPlanosDireita {
+  position: absolute;
+  padding : 0 7px;
+  top     : 40%;
+  right   : 4%;
+  z-index : 2;
+  cursor  : pointer;
+}
+
+#setaPlanosEsquerda {
+  position: absolute;
+  padding : 0 0 0 7px;
+  top     : 40%;
+  left    : 4%;
+  z-index : 2;
+  cursor  : pointer;
+}
+/*--------------------
+     5. EVENTOS
+  ----------------------*/

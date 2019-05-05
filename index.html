@@ -12,15 +12,17 @@
     <!-- Extra small devices (portrait phones, less than 500px) -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Extra small devices (portrait phones, less than 768px) -->
-    <link rel="stylesheet" media="(min-width: 500px) and (max-width: 768px)" href="css/mediaQ500-768.css"/>
+    <link rel="stylesheet" media="(min-width: 500px) and (max-width: 767px)" href="css/mediaQ500-768.css"/>
     <!-- Small devices (tablets, 768px and up) -->
-    <link rel="stylesheet" media="(min-width: 769px) and (max-width: 992px)" href="css/mediaQ768-992.css"/>
+    <link rel="stylesheet" media="(min-width: 768px) and (max-width: 991px)" href="css/mediaQ768-992.css"/>
     <!-- (desktops, 992 and up) -->
-    <link rel="stylesheet" media="(min-width: 993px) and (max-width: 1280px)" href="css/mediaQ992-1280.css"/>
+    <link rel="stylesheet" media="(min-width: 992px) and (max-width: 1280px)" href="css/mediaQ992-1280.css"/>
     <!-- Large devices (large desktops, 1280px and up) -->
     <link rel="stylesheet" media="(min-width: 1281px) and (max-width: 2000px)" href="css/mediaQ1280-2000.css"/>
     <!-- Large devices (large desktops, 1920px and up) -->
     <link rel="stylesheet" media="(min-width: 2000px)" href="css/mediaQMin2000.css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     <title>Cervejaria</title>
   </head>
 
@@ -32,15 +34,15 @@
         <div id="logo">
           <img src="img/Logo.png">
         </div>
-        <!-- Navbar for smaller then 768 -->
-        <nav class="navbar navbar-dark  navbar-expand-md justify-content-center 768">
+        <!-- Navbar for smaller then 992 -->
+        <nav id="navmenuS" class="navbar navbar-dark  navbar-expand-md justify-content-center navbar768">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="navbar-collapse collapse justify-content-between w-100" id="mainNav">
             <ul class="navbar-nav mx-auto text-center">
               <li class="nav-item active">
-                <a class="nav-link js-scroll-trigger" href="#menu">Home</a>
+                <a class="primeiro nav-link js-scroll-trigger" href="#home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#cervejas">Cervejas</a>
@@ -54,23 +56,23 @@
             </ul>
           </div>
         </nav>
-        <!-- End Navbar for smaller then 768 -->
-        <div class="img-fluid bannerCerveja">
-          <!-- Navbar for bigger then 768 -->
-          <nav class="navbar navbar-dark  navbar-expand-md justify-content-center 992">
+        <!-- End Navbar for smaller then 992 -->
+        <div class="bannerCerveja">
+          <!-- Navbar for bigger then 992 -->
+          <nav id="navmenuB" class="navbar navbar-dark  navbar-expand-md justify-content-center navbar992">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse justify-content-between w-100" id="mainNav">
               <ul class="navbar-nav mx-auto text-center">
                 <li class="nav-item active">
-                  <a class="nav-link js-scroll-trigger" href="#menu">Home</a>
+                  <a class="primeiro nav-link js-scroll-trigger navspacer" href="#menu">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#cervejas">Cervejas</a>
+                  <a class="nav-link js-scroll-trigger navspacer" href="#cervejas">Cervejas</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#eventos">Eventos</a>
+                  <a class="nav-link js-scroll-trigger navspacer" href="#eventos">Eventos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="#contato">Contatos</a>
@@ -78,7 +80,7 @@
               </ul>
             </div>
           </nav>
-          <!-- End Navbar for bigger then 768 -->
+          <!-- End Navbar for bigger then 992 -->
         </div>
 
       </section>
@@ -92,7 +94,9 @@
             </div>
           </div>
         </div>
-        <div class="img-fluid cervejasMobile"></div>
+        <div class="cervejasMobile">
+          <a href="cervejas.html"><img src="img/next.png" alt=""></a>
+        </div>
       </section>
       <!--End Of Section Cervejas -->
       <!--Begin of Section sobre -->
@@ -118,26 +122,38 @@
             </div>
           </div>
         </div>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="img/Eventos.png" alt="First slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="img/Eventos.png" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="img/Eventos.png" alt="Third slide">
+        <div class="slider-wrap">
+          <div id="setaPlanosDireita" onclick="slider.setaDireitaClick()"><img src="img/next.png" alt=""></div>
+          <div id="setaPlanosEsquerda" onclick="slider.setaEsquerdaClick()"><img src="img/prev.png" alt=""></div>
+          <div class="sliderPlanos" id="sliderPlanos">
+
+            <div class="holder">
+              <div class="slide-wrapper">
+                <div class="slidePlanos">
+                  <div class="planosContainer"></div>
+                  <div class="eventosContainer">
+                    <p class="textoEventos">Hello World!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-wrapper">
+                <div class="slidePlanos">
+                  <div class="planosContainer"></div>
+                  <div class="eventosContainer">
+                    <p class="textoEventos">Hello World!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-wrapper">
+                <div class="slidePlanos">
+                  <div class="planosContainer"></div>
+                  <div class="eventosContainer">
+                    <p class="textoEventos">Hello World!</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
         <div id="noCarousel">
           <div class="eventosContainer">
@@ -154,9 +170,14 @@
       <!--End Of Section Eventos -->
       <!--Begin of Section Contato -->
       <section id="contato">
+        <div class="bannerCervejaSobreEvento">
+          <div class="tituloSobreEventosContato">
+            <h2>Contato</h2>
+          </div>
+        </div>
+
         <div id="contatoMapa">
           <div id="dado" class="tituloSobreEventosContato">
-            <h2>Contato</h2>
             <div class="dados">
               <h3>endereço</h3>
               <p>Rua Almirante Alexandrino, 230</p>
@@ -186,35 +207,37 @@
       </section>
       <!--End Of Section Contato -->
       <!--Begin of Section Formulario -->
-      <section id="formSection">
-        <!--- Formulário ------>
-        <div id="formSpacer"></div>
-        <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form">
-          <!-- Hiden Input -->
-          <input type="hidden" name="recipient" value="comercial@noisehbom.com.br">
-          <input type="hidden" name="subject" value="E-Mail Nois eh Bom">
-          <!-- End of Hiden Input -->
-          <div>
-            <div class="form-group form-text">
-              <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
-            </div>
-            <div class="form-group form-text">
-              <input type="email" class="form-control" name="email" placeholder="e-mail" required="required">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="conteudo" rows="8" placeholder="Mensagem..." required="required"></textarea>
-            </div>
-          </div>
-          <div id="buttonBox">
+      <section id="form">
+        <div id="formSection">
+          <!--- Formulário ------>
+          <div id="formSpacer"></div>
+          <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form">
+            <!-- Hiden Input -->
+            <input type="hidden" name="recipient" value="comercial@noisehbom.com.br">
+            <input type="hidden" name="subject" value="E-Mail Nois eh Bom">
+            <!-- End of Hiden Input -->
             <div>
-              <div id="check"></div>
-              <div id="loadIcon"></div>
+              <div class="form-group form-text">
+                <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
+              </div>
+              <div class="form-group form-text">
+                <input type="email" class="form-control" name="email" placeholder="e-mail" required="required">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="conteudo" rows="8" placeholder="Mensagem..." required="required"></textarea>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary">
-              <span>enviar</span>
-            </button>
-          </div>
-        </form>
+            <div id="buttonBox">
+              <div>
+                <div id="check"></div>
+                <div id="loadIcon"></div>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <span>enviar</span>
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
       <!--- End of Formulário ------>
       <section id="redesSociais">
@@ -226,26 +249,21 @@
         </div>
       </section>
       <footer id="footer">
-        <p>Copyright &copy Numérique. Designed by Numerique</p>
+        <p>Copyright &copy Thot. Designed by Thot</p>
         <div id="footerSpacer"></div>
       </footer>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!--Custom Java for active Menu -->
-    <script src="js/active-menu.js"></script>
-    <!--Custom Java for Variabel Menu Size -->
-    <script src="js/Menu-Resize.js"></script>
+
+    <script src="js/menu-Resize.js"></script>
     <!--Custom Java for Variabel Menu Size -->
     <script src="js/planos-carousel.js"></script>
     <!--Custom Java for Scrolling -->
     <script src="js/scrolling-nav.js"></script>
-    <script>
-      document.write('<script src="http://' + (
-        location.host || '${1:localhost}'
-      ).split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></script>')
-    </script>
+    <!--Custom Java for Scrolling -->
+    <script src="js/stick-navBar.js"></script>
   </body>
 </html>

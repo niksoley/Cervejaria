@@ -1,0 +1,164 @@
+/* Main CSS Desenvolvido para Mobile */
+/*--------------------------------------------------------------------------------------
+Salão Cabalereiro - Template
+0. GLOBAL
+1. NAVBAR / LOGO
+2. BANNER
+3. CERVEJAS
+4. SOBRE
+5. EVENTOS
+6. CONTATO
+7. MAPA
+8. FORMULARIO
+ ----------------------------------------------------------------------------------------*/
+/*--------------------
+     0. GLOBAL
+  ----------------------*/
+#mainBackground {
+  margin: 60px 0;
+}
+/*--------------------
+    1. NAVBAR / LOGO
+ ----------------------*/
+.navbar-nav a {
+  margin-left: 20px;
+  font-size  : 18px;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding         : 0;
+}
+/*--------------------
+     2. BANNER
+  ----------------------*/
+.bannerCerveja {
+  background-image   : url("../img/BannerCerveja.jpg");
+  background-position: center;
+  background-repeat  : no-repeat;
+  background-size    : cover;
+  height             : 80vh;
+}
+/*--------------------
+    3. CERVEJAS
+ ----------------------*/
+.tituloCerveja h1 {
+  text-align: center;
+  font-size : 28px;
+}
+
+.backgroundTitulo {
+  background-position: center;
+  background-size    : 35%;
+  background-repeat  : no-repeat;
+  padding            : 30px 300px;
+}
+
+.cervejasMobile {
+  background-image   : url("../img/Cervejas.jpg");
+  background-position: center;
+  background-repeat  : no-repeat;
+  background-size    : cover;
+  height             : 50vh;
+}
+/*--------------------
+    4. SOBRE
+ ----------------------*/
+.tituloSobreEventosContato h2 {
+  font-size: 28px;
+}
+
+#imgBackgroundTituloSobre {
+  background-size: 25%;
+}
+
+#sobre p,
+.descricao p {
+  font-size   : 18px;
+  margin-left : 10%;
+  margin-right: 10%;
+}
+/*--------------------
+    5. EVENTOS
+ ----------------------*/
+.eventosContainer {
+  width : 50vw;
+  height: 50vw;
+}
+/*--------------------
+    6. CONTATO / MAPA
+ ----------------------*/
+#contatoMapa {
+  display        : flex;
+  justify-content: space-around;
+}
+
+#dado h2,
+#dado h3,
+#dado p {
+  text-align: right;
+}
+
+#dado {
+  margin-right: 50px;
+}
+
+.dados h3 {
+  font-size  : 18px;
+  font-weight: bolder;
+}
+
+.dados p {
+  font-size: 16px;
+}
+
+#contato form {
+  background-color: black;
+  min-width       : 5px;
+  max-width       : 10px;
+  padding         : 70px 120px 55px;
+  margin          : auto;
+  min-height      : auto;
+  box-shadow      : -10px 10px 10px 0 rgba(0, 0, 0, 0.5), -13px 13px 17px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+  font-size    : 10pt;
+  line-height  : 1.5;
+  border       : 5px solid white;
+  color        : white;
+  border-radius: 0;
+}
+
+.btn-primary {
+  font-size    : 14pt;
+  padding      : 5px 40px;
+  margin       : 0;
+  border-width : 1px;
+  border-radius: 0;
+}
+/*--------------------
+    7. MAPA
+ ----------------------*/
+#mapa {
+  width      : 60%;
+  height     : 400px;
+  margin-left: 100px;
+  order      : -2;
+}
+/*--------------------
+     3. Pagina CERVEJAS
+  ----------------------*/
+#cervejas {
+  margin-top: 0;
+}
+
+.container {
+  display        : flex;
+  justify-content: center;
+  max-width      : 100%;
+}
+
+.container-cerveja img {
+  width: 25rem;
+}
